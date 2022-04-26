@@ -8,7 +8,7 @@ $(document).ready(() => {
 });
 
 function getMovies(searchText){
-  $.get('http://www.omdbapi.com/?apikey=302bbe56&s='+searchText)
+  $.get('https://www.omdbapi.com/?apikey=302bbe56&s='+searchText)
     .then((response) => {
       console.log(response);
       let movies = response.Search;
@@ -42,7 +42,7 @@ function movieSelected(id){
 function getMovie(){
   let movieId = sessionStorage.getItem('movieId');
 
-  $.get('http://www.omdbapi.com/?apikey=302bbe56&i=' + movieId)
+  $.get('https://www.omdbapi.com/?apikey=302bbe56&i=' + movieId)
     .then((response) => {
       console.log(response);
       let movie = response;
